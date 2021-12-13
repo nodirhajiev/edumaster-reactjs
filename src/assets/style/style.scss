@@ -1,0 +1,579 @@
+@import "./variables";
+@import "./mixins";
+@import "./fonts";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: $bg-color;
+}
+.wrapper {
+  position: relative;
+  height: auto;
+}
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* N a v b a r - S t a r t */
+.navbar {
+  &__row {
+    @include d-flex(center, space-between, row, unset);
+  }
+    &__left {
+      background: $item-bg-color;
+      border: 1px solid $border-color;
+      box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.1), inset -2px 2px 0px rgba(76, 81, 101, 0.2);
+      border-radius: 10px;
+      width: 300px;
+      padding: 24px 0 15px 40px;
+
+      &-text {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $white-color;
+      }
+
+      &-price {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 130%;
+        color: $white-color;
+      }
+      &-day {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        background: -webkit-linear-gradient(270deg, #CAAB77 1.19%, #FEDFA6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &__right {
+      width: 350px;
+      height: 190px;
+      background: $item-bg-color;
+      box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.1), inset -2px 2px 0px rgba(76, 81, 101, 0.2);
+      border-radius: 10px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
+      @include d-flex(center, center, column, unset);
+
+      &-text {
+        margin-bottom: 5px;
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $white-color;
+      }
+      &-title {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 130%;
+        background: -webkit-linear-gradient(270deg, #CAAB77 1.19%, #FEDFA6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+/* N a v b a r - E n d */
+
+/*  T A B L E - S T A R T  */
+.table {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  table {
+    width: 100%;
+    margin-top: 60px;
+    thead {
+      td {
+        background: $border-color;
+      }
+    }
+
+    tbody {
+      background: $item-bg-color;
+    }
+
+
+    .table__cell {
+      padding: 15px 20px;
+
+      &-text {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: $white-color;
+      }
+    }
+
+    .table__dayCell {
+      @include d-flex(center, unset, row, unset);
+      font-family: $main-font;
+
+      &-day {
+        margin: 0 10px;
+      }
+      &-time {
+        color: $table-timeCell-color;
+      }
+    }
+  }
+}
+/*  T A B L E - E N D  */
+
+
+/* P R O D U C T - S T A R T */
+.product__row {
+  @include d-flex(center, center, row, unset);
+  height: 300px;
+  margin-top: 80px;
+
+  .product__left {
+    @include d-flex(center, center, row, unset);
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(213.67deg, #222431 19.97%, #2B2D3E 79.98%);
+    box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.1), inset -2px 2px 0px rgba(76, 81, 101, 0.2);
+    border-radius: 10px;
+    margin-right: 7px;
+
+    .product__content {
+      height: 219px;
+      width: 733px;
+      background: $product-bg-item;
+      border: 1px solid $product-border-color;
+      box-sizing: border-box;
+      box-shadow: 4px 4px 10px #202330, -4px -4px 10px #303240;
+      border-radius: 10px;
+      margin: 40px 50px 34px 30px;
+      padding: 28px 42px 24px 56px;
+      @include d-flex(flex-start, center, column, unset);
+
+      &-item1 {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 140%;
+        color: $white-color;
+      }
+      &-item2 {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: $table-timeCell-color;
+      }
+    }
+  }
+  .product__right {
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(213.67deg, #222431 19.97%, #2B2D3E 79.98%);
+    box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.1), inset -2px 2px 0px rgba(76, 81, 101, 0.2);
+    border-radius: 10px;
+    @include d-flex(center, center, column, unset);
+
+    .product__price {
+        font-family: $secondary-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 130%;
+        color: $white-color;
+    }
+
+    .product__state {
+      display: flex;
+      margin: 20px 0;
+
+      &-price {
+        font-family: $secondary-font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 130%;
+        color: #7C7F99;
+        opacity: 0.5;
+        margin-right: 20px;
+        @include d-flex(center, center, row, unset)
+      }
+
+      &-div {
+        height: 40px;
+        width: 120px;
+        background: $border-color;
+        border-radius: 5px;
+        @include d-flex(center, center, row, unset);
+
+        .product__state-num {
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 150%;
+          background-color: $product__state-bg;
+          color: $white-color;
+          padding: 7px 20px 8px;
+        }
+        button {
+          border: none;
+          font-size: larger;
+          background-color: transparent;
+          color: $white-color;
+          text-align: center;
+          padding: 9px 11px;
+          cursor: pointer;
+        }
+      }
+    }
+    .product__btn button {
+      height: 60px;
+      width: 250px;
+      background-color: #00714f;
+      background-blend-mode: multiply, normal, normal;
+      box-shadow: 0 20px 21px -15px rgba(0, 124, 86, 0.72), 0px 1px 0px #004930, inset 0px -2px 13px rgba(255, 255, 255, 0.26);
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+
+      &:hover{
+        background-color: #2dc694;
+      }
+
+      &:active{
+        background-color: #18aa7c;
+      }
+      p {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $white-color;
+      }
+    }
+  }
+}
+/* P R O D U C T - E N D */
+
+/* C A R D - S T A R T */
+.cart {
+  @include d-flex(center, center, column, unset);
+  position: fixed;
+  top: 0;
+  right: -520px;
+  width: 520px;
+  height: 100vh;
+  background: $card__bg-color;
+  transition: all 0.5s;
+
+  .basket {
+    @include d-flex(center, space-around, column, unset);
+    position: absolute;
+    left: -63px;
+    width: 63px;
+    height: 158px;
+    background: #262836;
+    box-shadow: 0 5px 21px rgba(0, 0, 0, 0.08);
+    border-radius: 16px 0 0 16px;
+    cursor: pointer;
+    padding-bottom: 20px;
+
+    &-text {
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: $white-color;
+      transform: rotate(90deg);
+    }
+  }
+  .card {
+    @include d-flex(center, space-between, column, unset);
+    position: fixed;
+    top: 0;
+    right: -34%;
+    height: 100vh;
+    width: 520px;
+    background: $card__bg-color;
+    transition: all 0.5s;
+
+    .card__logo {
+      margin-bottom: 33px;
+    }
+
+    .card__product {
+      @include d-flex(center, space-evenly, row, unset);
+      position: relative;
+      width: 450px;
+      height: 190px;
+      background: #222431;
+      border: 1px solid $product-border-color;
+      box-shadow: 4px 4px 10px #202330, -4px -4px 10px #303240;
+      border-radius: 10px;
+      margin-top: 20px;
+
+      .card__content {
+        margin-right: 18px;
+
+        .card__bookname {
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 25px;
+          line-height: 140%;
+          background: linear-gradient(270deg, #CAAB77 1.19%, #FEDFA6 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .card__authorname {
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: $white-color;
+        }
+      }
+
+      .card__state {
+        display: flex;
+        margin: 40px 0 0;
+        padding-left: 23px;
+
+        &-price {
+          font-family: $secondary-font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 130%;
+          color: $table-timeCell-color;
+          opacity: 0.5;
+          margin-right: 20px;
+          @include d-flex(center, center, row, unset);
+        }
+
+        &-div {
+          height: 40px;
+          width: 120px;
+          background: $border-color;
+          border-radius: 5px;
+          @include d-flex(center, center, row, unset);
+
+          .card__state-num {
+            font-family: $main-font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            background-color: $product__state-bg;
+            color: $white-color;
+            padding: 7px 20px 8px;
+          }
+
+          button {
+            border: none;
+            font-size: larger;
+            background-color: transparent;
+            color: $white-color;
+            text-align: center;
+            padding: 9px 11px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .card__delete {
+        @include d-flex(center, center, column, unset);
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 29px;
+        height: 29px;
+        background: linear-gradient(0deg, #006546 4.29%, #00845E 100%), #BF0000;
+        border-radius: 4.46154px;
+        cursor: pointer;
+      }
+    }
+    .card__product.active {
+      display: none;
+    }
+    .card__info {
+      @include d-flex(center, center, column, unset);
+      width: 450px;
+      height: 235px;
+      background: $card-info;
+      border: 1px solid $border-color;
+      box-sizing: border-box;
+      box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-top: 20px;
+
+      &-items {
+        width: 315px;
+        height: 195px;
+        margin-top: 20px;
+        position: relative;
+
+        .card__info-title {
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 191.4%;
+          color: $table-timeCell-color;
+          position: relative;
+
+          span {
+            color: $white-color;
+          }
+        }
+
+        .card__info-allPrice {
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: $white-color;
+          margin-top: 40px;
+          position: relative;
+        }
+
+        .card__info-allPrice:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 347px;
+          height: 1px;
+          margin-top: -22px;
+          border-radius: 10px;
+          background: #3B3D4F;
+        }
+
+        .card__info-price {
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 25px;
+          line-height: 30px;
+          background: linear-gradient(270deg, #CAAB77 1.19%, #FEDFA6 100%),
+          linear-gradient(0deg, #FFFFFF, #FFFFFF);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+    .card__info.active {
+      display: none;
+    }
+    .card__btn {
+      .card__btn-btn {
+        height: 60px;
+        width: 450px;
+        background-color: $button__bg-color;
+        background-blend-mode: multiply, normal, normal;
+        box-shadow: 0 20px 21px -15px rgba(0, 124, 86, 0.72), 0px 1px 0px #004930, inset 0px -2px 13px rgba(255, 255, 255, 0.26);
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        margin-top: 55px;
+
+        &:hover{
+          background-color: #2dc694;
+        }
+
+        &:active{
+          background-color: #18aa7c;
+        }
+
+        p {
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 17px;
+          text-align: center;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: $white-color;
+        }
+      }
+    }
+  }
+  .nothing {
+    display: none;
+
+    &-text1 {
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 140%;
+      text-align: center;
+      color: $white-color;
+      z-index: 1;
+    }
+    &-text2 {
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      color: $table-timeCell-color;
+      z-index: 1;
+    }
+  }
+  .nothing.active {
+    @include d-flex(center, center, column, unset);
+  }
+.card.active {
+
+  right: 0
+}
+}
+.cart.active {
+  right: 0;
+}
+/* C A R D - E N D */
