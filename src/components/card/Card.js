@@ -1,5 +1,5 @@
 import React from 'react';
-import logo_img from '../../assets/images/LOGO.svg';
+import logo_img from '../navbar/LOGO.svg';
 import card__delete from '../../assets/images/delete.svg';
 import store from "../../store/store";
 

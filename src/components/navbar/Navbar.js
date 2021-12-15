@@ -1,5 +1,5 @@
-import React from 'react'
-import logo from '../../assets/images/LOGO.svg'
+import React from 'react';
+import logo from '../navbar/LOGO.svg'
 
 function Navbar({ daySum, allSum }) {
   return (
