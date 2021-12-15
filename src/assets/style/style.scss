@@ -34,7 +34,7 @@ body {
   &__left {
     background: $item-bg-color;
     border: 1px solid $border-color;
-    box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.1), inset -2px 2px 0px rgba(76, 81, 101, 0.2);
+    box-shadow: -8px 0 10px rgba(0, 0, 0, 0.1), inset -2px 2px 0 rgba(76, 81, 101, 0.2);
     border-radius: 10px;
     width: 300px;
     padding: 24px 0 15px 40px;
@@ -77,7 +77,7 @@ body {
     width: 350px;
     height: 190px;
     background: #252631;
-    box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.1), inset -2px 2px 0px rgba(76, 81, 101, 0.2);
+    box-shadow: -8px 0 10px rgba(0, 0, 0, 0.1), inset -2px 2px 0 rgba(76, 81, 101, 0.2);
     border-radius: 10px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
     @include d-flex(center, center, column, unset);
@@ -177,7 +177,7 @@ body {
 
 .product {
   background: linear-gradient(213.67deg, #222431 19.97%, #2B2D3E 79.98%);
-  box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.1), inset -2px 2px 0px rgba(76, 81, 101, 0.2);
+  box-shadow: -8px 0 10px rgba(0, 0, 0, 0.1), inset -2px 2px 0 rgba(76, 81, 101, 0.2);
   border-radius: 10px;
   margin-bottom: 30px;
 
@@ -289,7 +289,7 @@ body {
     width: 60%;
     margin: 0 auto;
     background-blend-mode: multiply, normal, normal;
-    box-shadow: 0px 20px 21px -15px rgba(0, 124, 86, 0.72), 0px 1px 0px #004930, inset 0px -2px 13px rgba(255, 255, 255, 0.26);
+    box-shadow: 0 20px 21px -15px rgba(0, 124, 86, 0.72), 0 1px 0 #004930, inset 0 -2px 13px rgba(255, 255, 255, 0.26);
     border-radius: 5px;
     background: linear-gradient(0deg, #1fb587 4.29%, #ffffff 100%), #3db85a;
     padding: 22px 0;
@@ -399,7 +399,7 @@ body {
     background: #2F313F;
     border: 1px solid #2F3140;
     box-sizing: border-box;
-    box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -8px 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-bottom: 40px;
 
@@ -454,7 +454,7 @@ body {
       width: 100%;
       margin: 0 auto;
       background-blend-mode: multiply, normal, normal;
-      box-shadow: 0px 20px 21px -15px rgba(0, 124, 86, 0.72), 0px 1px 0px #004930, inset 0px -2px 13px rgba(255, 255, 255, 0.26);
+      box-shadow: 0 20px 21px -15px rgba(0, 124, 86, 0.72), 0 1px 0 #004930, inset 0 -2px 13px rgba(255, 255, 255, 0.26);
       border-radius: 5px;
       border: none;
       background: linear-gradient(0deg, #1fb587 4.29%, #ffffff 100%), #3db85a;
@@ -482,7 +482,7 @@ body {
   width: 63px;
   height: 158px;
   background: #262836;
-  box-shadow: 0px 5px 21px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 21px rgba(0, 0, 0, 0.08);
   border-radius: 16px 0 0 16px;
   cursor: pointer;
   padding-bottom: 20px;
