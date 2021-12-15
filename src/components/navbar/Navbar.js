@@ -7,7 +7,7 @@ function Navbar({ daySum, allSum }) {
       <div className="container">
         <div className="navbar__row">
           <div className="navbar__left">
-            <p className="navbar__left-text">бугунги сумма:</p>
+            <p className="navbar__left-text">Бугунги сумма:</p>
             <h3 className="navbar__left-price">
               {new Intl.NumberFormat('decimal').format(daySum)} сум
             </h3>
@@ -21,7 +21,7 @@ function Navbar({ daySum, allSum }) {
           </div>
 
           <div className="navbar__right">
-            <p className="navbar__right-text">умумий келган пул:</p>
+            <p className="navbar__right-text">Умумий келган пул:</p>
             <h3 className="navbar__right-title">
               {new Intl.NumberFormat('decimal').format(allSum)} сум
             </h3>
