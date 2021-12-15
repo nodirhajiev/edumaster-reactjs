@@ -1,5 +1,17 @@
-import React from "react";
-import ReactDom from "react-dom"
+import React from 'react';
+import ReactDOM from 'react-dom';
 import App from "./App";
+import store from "./store/store";
 
-ReactDom.render(<App/>, document.querySelector('#root'))
+const reRenderDom = () =>{
+    ReactDOM.render(
+        <App store={store.getState()}/>,
+        document.querySelector('#root')
+    );
+}
+
+reRenderDom();
+
+store.subscribe(reRenderDom);
+
+
